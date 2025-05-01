@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 231 81% 51%; /* Apollo247 blue */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  --success: 120 100% 29%;
+  --warning: 38 92% 50%;
+  --apollo-orange: 16 100% 50%; /* Apollo247 orange */
+  --apollo-gray-light: 210 16% 93%;
+  --apollo-gray-50: 210 17% 98%;
+  --apollo-gray-100: 210 16% 93%;
+  --apollo-gray-200: 210 14% 89%;
+  --apollo-gray-300: 210 14% 83%;
+  --apollo-gray-400: 210 11% 71%;
+  --apollo-gray-500: 210 11% 71%;
+  --apollo-gray-600: 210 7% 46%;
+  --apollo-gray-700: 210 12% 23%;
+  --apollo-gray-800: 210 10% 23%;
+  --apollo-gray-900: 210 11% 15%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 231 81% 51%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-[#f8f9fa] text-foreground;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-heading {
+    @apply font-medium mb-2;
+  }
+  
+  .filter-section {
+    @apply border-b border-[#dee2e6] pb-4 mb-4;
+  }
+  
+  .filter-option {
+    @apply flex items-center mb-2;
+  }
+  
+  .doctor-tag {
+    @apply bg-apollo-gray-light px-3 py-1 rounded-full text-sm flex items-center;
+  }
+}
